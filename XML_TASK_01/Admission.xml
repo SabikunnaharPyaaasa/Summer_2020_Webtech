@@ -1,0 +1,29 @@
+<Admission_Info>
+    <Record>
+	    <SL_No.>23</SL_No.>
+		<FirstName>John</FirstName>
+		<LastName>Carter </LastName>
+		<Admission_Date>25</Admission_Date>
+		<Admission_Month>12</Admission_Month>
+		<Admission_Year>2015</Admission_Year>
+	</Record>
+	
+	<Record>
+	    <SL_No.>29 </SL_No.>
+		<FirstName>Bob</FirstName>
+		<LastName>Marshal</LastName>
+		<Admission_Date>13</Admission_Date>
+		<Admission_Month>01</Admission_Month>
+		<Admission_Year>1999</Admission_Year>
+	</Record>
+	
+	<Record>
+	    <SL_No.>35 </SL_No.>
+		<FirstName>Clark</FirstName>
+		<LastName>Kent</LastName>
+		<Admission_Date>17</Admission_Date>
+		<Admission_Month>06</Admission_Month>
+		<Admission_Year>2005</Admission_Year>
+	</Record>
+	
+</Admission_Info>
