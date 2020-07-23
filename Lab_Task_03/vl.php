@@ -43,6 +43,45 @@ if(isset($_POST['submit'])){
        echo "Invalid Name!";
    }
 
-  	 
+  //Email validation
+   $email=$_POST['email'];
+   $pos1 =strpos($email, '@');
+   $pos2 = strpos($email, ".com");
+   if(empty($email))
+   {
+    echo "   Email canot be empty";
+   }
+   elseif($pos1==False && $pos2==False && $pos2>$pos1)
+   {
+    echo "Must be a valid email address (i.e anything@example.com) ";
+    
+   }
+   else
+   {
+     echo " Email: ";
+     echo $email;
+   }
 
+   //Gender Validation
+
+    if (isset($_POST['gender']))
+    {
+     $gender = $_POST['gender'];
+        if ($_POST['gender'] == 'Male')
+          {
+            echo "Gender: Male";
+          }
+        elseif($_POST['gender'] == 'Female')
+            {
+              echo "Gender: Female";
+            }
+         elseif($_POST['gender'] == 'Other')
+            {
+              echo "Gender: Other";
+            }
+           }
+        else
+        {
+         echo "please select gender !!!";
+        }
 }
