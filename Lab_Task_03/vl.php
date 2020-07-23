@@ -1,66 +1,61 @@
 <?php
 if(isset($_POST['submit'])){
 //Name validation
-	$a = $_POST['name'];
-	$valid=FALSE;
-	if($a == "")
-	 {
-	 	$valid=FALSE;
-	 	echo "empty";
-	 }
-	 if(strlen($a)<2)
-	 {
-	 	$valid=FALSE;
-	 	echo "should be greater or equal 2";
-	 }
-	 elseif(strlen($a)>=2 && $a[0]>='A' && $a[0]<='Z' || $a[0]>='a' && $a[0]<='z' || $a[0]=='.' ||$a[0]=='-')
-	 {
-
-	 	for($i = 1; $i<strlen($a); $i++)
-           {
-               if($a>='A'&& $a<='Z' || $a>='a'&& $a<='z' || $a=='.' || $a=='-' )
-                 {
-                      $valid = TRUE;
-                      //echo $a;
-                 }
-
-                 else {
-                     $valid = FALSE;
-                 }
-           }
-	 }
+$name=$_POST['name'];
+  $valid=FALSE;
+  {
+    if($name!="")
+    {
+      if(strlen($name)>=2)
+      {
+        if($name[0]>='A' && $name[0]<='Z' || $name[0]>='a' && $name[0]<='z')
+        {
+          for($i = 0; $i<strlen($name); $i++)
+          {
+            if(($name[$i]>='A' && $name[$i]<='Z') || ($name[$i]>='a' && $name[$i]<='z') || $name[$i]!='.' || $name[$i]='-')
+            {
+              $valid=TRUE;
+            }
+            else
+            {
+              $valid=FALSE;
+            }
+          }
+        }         
+      }
+      else echo "Must be contain at least two word";
+    }
     else
-	 {
-	 	$valid==FALSE;	
-	 }
-
-  if($valid == TRUE )
-   {
-   	echo "Name: ";
-       echo $a;
-   }
-   else {
-       echo "Invalid Name!";
-   }
+    {
+      echo "Invalid user Input for empty";
+    }
+    if($valid==TRUE)
+    {
+      echo $name;
+    }
+    else
+    {
+      echo "Invalid";
+    }
+  }
 
   //Email validation
    $email=$_POST['email'];
    $pos1 =strpos($email, '@');
    $pos2 = strpos($email, ".com");
-   if(empty($email))
+   if(!empty($email))
    {
-    echo "   Email canot be empty";
-   }
-   elseif($pos1==False && $pos2==False && $pos2>$pos1)
-   {
-    echo "Must be a valid email address (i.e anything@example.com) ";
+    if($pos1==True && $pos2==True && $pos2>$pos1)
+    {
+       echo "Email:", $email;
+    }
     
-   }
    else
    {
-     echo " Email: ";
-     echo $email;
+     echo " Invalid ";
+     
    }
+ }
 
    //Gender Validation
 
@@ -84,4 +79,87 @@ if(isset($_POST['submit'])){
         {
          echo "please select gender !!!";
         }
+//DOB Validation
+
+    $date=$_POST['Date'];
+    $month=$_POST['Month'];
+    $year=$_POST['Year'];
+    if(empty($date)||empty($month)||empty($year))
+    {
+      echo "Invalid Date of Birth";
+    }
+    elseif(($date<=31 && $date>0) && ($month<=12 && $month>0) && ($year>=1900 && $year<=2016))
+    {
+      echo "Date: ";
+      echo $date;
+      echo "/";
+      echo $month;
+      echo "/";
+      echo $year;
+      
+    }
+    else
+    {
+      echo "Invalid Date format";
+    }
+
+  //Degree Validation
+
+    if (isset($_POST['degree']))
+    {
+     $degree = $_POST['degree'];
+        if ($_POST['degree'] == 'SSC')
+          {
+            echo "Degree: SSC";
+          
+          }
+        if($_POST['degree'] == 'HSC')
+            {
+              echo "Degree: HSC";
+            }
+         if($_POST['degree'] == 'BSc')
+            {
+              echo "Degree: BSc";
+            }
+          if($_POST['degree'] == 'MSc')
+            {
+              echo "Degree: MSc";
+            }
+        }
+        else
+        {
+         echo "please select degree !!!";
+        }
+
+  //Blood Group Validation
+
+        if(isset($_POST['blood']))
+  {
+   $blood=$_POST['blood'];
+    //echo $blood;
+   if(($_POST['blood']=="+A") ||($_POST['blood']=="-A") || ($_POST['blood']=="+B") || ($_POST['blood']=="+B") || ($_POST['blood']=="+O") || ($_POST['blood']=="-O") || ($_POST['blood']=="+AB") || ($_POST['blood']=="-AB"))
+   {
+     echo $blood;
+   }
+  
+  }
+  else
+  {
+    echo "Error";
+  }
+
+  //Picture upload Validation
+
+  $a = $_POST['file'];
+
+if(($_POST['file']==" "))
+{
+    echo "Invalid User  Id!";
 }
+
+else
+{
+   echo "Submit Successful!";
+}
+}
+?>

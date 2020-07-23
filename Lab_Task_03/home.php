@@ -44,9 +44,9 @@
 				    <tr height="40px">
 					    <td><b>Date Of Birth</b></td>
 					    <td >
-						    <input type="text" size="1%"><b>/</b>
-						    <input type="text" size="1%"><b>/</b>
-					    	<input type="text" size="1%"> (dd/mm/yyyy)
+						    <input type="text" name="Date"  size="1%"><b>/</b>
+						    <input type="text" name="Month"  size="1%"><b>/</b>
+					    	<input type="text" name="Year"  size="1%"> (dd/mm/yyyy)
 					    </td>
 					    <td ></td>
 					
@@ -55,14 +55,14 @@
 					    <td><b>Blood Group</b></td>
 					    <td >
 						    <select name="">
-							    <option value="">A+</option>
-						    	<option value="">A-</option>
-							    <option value="">B+</option>
-							    <option value="">B-</option>
-							    <option value="">O+</option>
-							    <option value="">0-</option>
-							    <option value="">AB</option>
-							    <option value="">AB-</option>
+							    <option value="+A">A+</option>
+						    	<option value="-A">A-</option>
+							    <option value="+B">B+</option>
+							    <option value="-B">B-</option>
+							    <option value="+O">O+</option>
+							    <option value="-O">0-</option>
+							    <option value="+AB">AB+</option>
+							    <option value="-AB">AB-</option>
 
 					    </td>
 					    <td ></td>
@@ -71,10 +71,10 @@
 				    <tr height="40px">
 					    <td><b>Degree</b></td>
 					    <td >
-						    <input type="checkbox" name="degree" value="">SSC
-						    <input type="checkbox" name="degree" value="">HSC
-						    <input type="checkbox" name="degree" value="">BSc.
-						    <input type="checkbox" name="degree" value="">MSc.
+						    <input type="checkbox" name="degree" value="SSC">SSC
+						    <input type="checkbox" name="degree" value="HSC">HSC
+						    <input type="checkbox" name="degree" value="BSc">BSc.
+						    <input type="checkbox" name="degree" value="MSc">MSc.
 					    </td>
 					    <td ></td>
 					
@@ -82,7 +82,7 @@
 				    <tr height="40px">
 					    <td><b>Photo</b></td>
 					    <td colspan="2">
-						    <input type="button" name="" value="Browse..."> No file selected.
+						    <input type="file" name="file" value="Browse...">
 					    </td>
 					
 				    </tr>
@@ -100,9 +100,6 @@
 			    </table>
 			</form>
 
-	    </center>
-
-
-		
+	    </center>		
 </body>
 </html>
