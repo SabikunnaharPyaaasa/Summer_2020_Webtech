@@ -1,18 +1,28 @@
 <?php
 if(isset($_POST['submit'])){
 	$a = $_POST['name'];
+	$email=$_POST['email'];
 	if($a == "")
 	 {
-	 	echo "Cannot be empty  & ";
+	 	echo "Name Cannot be empty  & ";
 	 }
 
 	 if(strlen($a)<3)
 	 {
-	 	echo "Contains at least two words";
+	 	
+	 	echo "  Name Contains at least two words \r\n";
 	 }
+	 if($email=="")
+	 {
+	 	
+	 	echo "   Email Cannot be empty";
+	 }
+
 	else
 	{
 		echo $a;
+		echo " \n ";
+		echo $email;
 	}
 }
 	
@@ -45,7 +55,7 @@ if(isset($_POST['submit'])){
 				    <tr height="40px">
 					    <td ><b>Email<b></td>
 					    <td >
-					    	<input type="email" name="" value="">
+					    	<input type="email" name="email" value="">
 					    </td>
 					    <td ></td>
 					
