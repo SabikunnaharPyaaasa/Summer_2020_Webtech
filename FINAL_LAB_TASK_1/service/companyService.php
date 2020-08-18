@@ -69,7 +69,8 @@
 			echo "DB connection error";
 		}
 
-		$sql = "delete from  company_info where id={$user['id']}";
+		$sql = "delete from  company_info where id={$company['id']}";
+
 
 		if(mysqli_query($conn, $sql)){
 			return true;

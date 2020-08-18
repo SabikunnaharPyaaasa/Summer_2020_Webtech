@@ -40,8 +40,8 @@
 			<td><img src="<?=$company[$i]['company_logo']?>"></td>
 			<td><?=$company[$i]['user_account_id']?></td>
 			<td>
-				<a href="companyUpdate.php?id=<?=$company[$i]['id']?>">Edit</a> |
-				<a href="companyDelete.php?id=<?=$company[$i]['id']?>">Delete</a> 
+				<a href="companyUpdate.php?id=<?=$company[$i]['id']?>">Edit</a> | 
+				<a href="companyDelete.php?id=<?=$company[$i]['id']?>"><input type="button" value="Delete" onclick="return confirm('Are you want to delete <?=$company[$i]['companyDelete']?>?')" ></a>
 			</td>
 		</tr>
 
