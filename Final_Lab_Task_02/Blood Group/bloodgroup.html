@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<form  action="bloodGroupCheck.php" onsubmit= "return Validate()" method="post">
+		
+		Blood Group 
+		<table>
+			<tr><td>
+
+			<select name="bloodGroup" id="bloodGroup" onmouseout="bloodValidation()" onclick="Remove()" onmouseover="Remove()">
+				<option>A+</option>
+				<option>A-</option>
+				<option>B+</option>
+				<option>O+</option>
+				<option>AB+</option>
+				<option>B-</option>
+				<option>O-</option>
+				<option>AB-</option>
+			</select>
+			</td>
+			<td id="bloodMsg"></td>
+			</tr>
+			<tr>				
+			<td>
+				<hr>
+				<input type="submit" name="submit" value="Submit">
+			</td>
+			<td>
+			
+			</td>
+			</tr>
+		</table>
+		
+	</form>
+
+</body>
+</html>
