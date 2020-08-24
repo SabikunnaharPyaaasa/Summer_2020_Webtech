@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<form  action="emailcheck.php" onsubmit= "return validate()" method="post">
+	<table>
+		<tr>
+			<td>Email</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><input type="email" id="Email" name="Email" onblur="EmailValidity()" onkeyup="Remove()" ></td>
+			<td id="emailMsg">i </td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="Submit" value="submit" > </td>
+			<td></td>
+		</tr>
+	</table>
