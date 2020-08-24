@@ -5,18 +5,18 @@
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-	<form  action="emailcheck.php" onsubmit= "return validate()" method="post">
+	<form onsubmit= "return Validate()" action="emailCheck.php"  method="post">
 	<table>
 		<tr>
 			<td>Email</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td><input type="email" id="Email" name="Email" onblur="EmailValidity()" onkeyup="Remove()" ></td>
+			<td><input type="email" id="Email" name="Email" onblur="EmailValidity()" onkeyup="Remover()"   ></td>
 			<td id="emailMsg">i </td>
 		</tr>
 		<tr>
-			<td><input type="submit" name="Submit" value="submit" > </td>
+			<td><input type="submit" name="submit" value="submit" > </td>
 			<td></td>
 		</tr>
 	</table>

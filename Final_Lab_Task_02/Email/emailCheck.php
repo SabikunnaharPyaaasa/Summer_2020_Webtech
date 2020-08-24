@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['Submit'])){
+if(isset($_POST['submit'])){
  $email=$_POST['Email'];
    $pos1 =strpos($email, '@');
    $pos2 = strpos($email, ".com");
@@ -7,7 +7,9 @@ if(isset($_POST['Submit'])){
    {
     if($pos1==True && $pos2==True && $pos2>$pos1)
     {
-       echo "Thanks", $email;
+       echo "Thanks";
+       ?></br><?php
+       echo $email;
     }
     
    else
@@ -18,4 +20,3 @@ if(isset($_POST['Submit'])){
  }
  }
 ?>
-
