@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<form  action="genderCheck.php" onsubmit= "return Validate()" method="post">
+	<table>
+		<tr>
+			<td>Gender</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			<input type="radio" name="gender" id="Male"  onclick="Remove()" onmouseover="Remove()" onmouseout="genderValidation()" >Male
+            <input type="radio" name="gender" id="Female" onclick="Remove()"onmouseover="Remove()" onmouseout="genderValidation()" >Female
+            <input type="radio" name="gender" id="Other"  onclick="Remove()" onmouseover="Remove()" onmouseout="genderValidation()" >Other
+			</td>
+			<td id="genderMsg">i </td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="submit" value="submit" > </td>
+			<td></td>
+		</tr>
+	</table>
+
+
+	
