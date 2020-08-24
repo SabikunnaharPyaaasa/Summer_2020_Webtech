@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<form  action="degreeCheck.php" onsubmit= "return Validate()" method="post">
+		<fieldset>
+		<legend> Degree </legend><br>
+		<table>
+			<tr><td>
+			<input type="checkbox" id="ssc" name="degree" value="ssc" onclick="Remove()" onmouseover="Remove()" onmouseout="degreeValidation()">HSC 
+			<input type="checkbox" id="hsc" name="degree" value="hsc" onclick="Remove()" onmouseover="Remove()" onmouseout="degreeValidation()" > SSC
+			<input type="checkbox" id="bsc" name="degree" value="bsc" onclick="Remove()" onmouseover="Remove()" onmouseout="degreeValidation()" > BSC <br>
+			</td>
+			<td id="degreeMsg"></td>
+			</tr>
+			<tr>
+				
+			<td><input type="submit" name="submit" value="Submit"></td>
+			<td>
+			
+			</td>
+			</tr>
+		</table>
+		</fieldset>
+	</form>
+
+</body>
+</html>
