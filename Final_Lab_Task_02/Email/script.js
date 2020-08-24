@@ -12,9 +12,9 @@ function emailValidity()
 		window.valid=false;
 
 	}
-	else if(position1== false && position2== false && position1>position2)
+	else if(position1== false || position2== false || position1>position2)
 	{
-		document.getElementById("emailMsg").innerHTML = "anything@example.com";
+		document.getElementById("emailMsg").innerHTML = " must be a valid email address like (i.e anything@example.com)";
 		window.valid=false;
 	}
 	else
