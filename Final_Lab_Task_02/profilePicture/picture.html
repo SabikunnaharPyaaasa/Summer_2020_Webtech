@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<form  action="degreeCheck.php" onsubmit= "return Validate()" method="post">
+		<fieldset>
+		<legend> Profile Picture </legend><br>
+		<table>
+			<tr><td>User Id
+				<input type="number" id="id" name="id" onkeyup="Remove()" onblur="userValidation()" onclick="Remove()">
+			</td>
+			<td id="idMsg"></td>
+		</tr>
+			<tr>
+			<td>Picture <input type="file" name="file" id="file"  onmouseout="Picture()" onmouseover="Remove()" onclick="Remove()"></td>
+			<td id="picMsg"></td>
+		</tr>
+			<td><input type="submit" name="submit" value="Submit"></td>
+
+			<td>
+			
+			</td>
+			<td></td>
+			</tr>
+		</table>
+		</fieldset>
+	</form>
+
+</body>
+</html>
