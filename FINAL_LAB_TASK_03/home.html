@@ -28,9 +28,9 @@
 				    <tr height="40px">
 					    <td ><b>Email<b></td>
 					    <td >
-					    	<input type="email" name="" value="">
+					    	<<input type="email" id="Email" name="Email" onblur="EmailValidity()" onkeyup="emailRemover()"   >>
 					    </td>
-					    <td ></td>
+					    <td id ="emailMsg" ></td>
 					
 				    </tr>
 				    <tr height="40px">
@@ -57,35 +57,36 @@
 				    <tr height="40px">
 					    <td><b>Blood Group</b></td>
 					    <td >
-						    <select name="">
-							    <option value="">A+</option>
-						    	<option value="">A-</option>
-							    <option value="">B+</option>
-							    <option value="">B-</option>
-							    <option value="">O+</option>
-							    <option value="">0-</option>
-							    <option value="">AB</option>
-							    <option value="">AB-</option>
+						    <select name="bloodgroup" id="bloodGroup" onmouseout="bloodValidation()" onclick="bgRemove()" onmouseover="bgRemove()">
+				<option>A+</option>
+				<option>A-</option>
+				<option>B+</option>
+				<option>O+</option>
+				<option>AB+</option>
+				<option>B-</option>
+				<option>O-</option>
+				<option>AB-</option>
 
 					    </td>
-					    <td ></td>
+					    <td id="bloodMsg" ></td>
 					
 				    </tr>
 				    <tr height="40px">
 					    <td><b>Degree</b></td>
 					    <td >
-						    <input type="checkbox" name="degree" value="">SSC
-						    <input type="checkbox" name="degree" value="">HSC
-						    <input type="checkbox" name="degree" value="">BSc.
-						    <input type="checkbox" name="degree" value="">MSc.
+						    <input type="checkbox" id="ssc" name="degree" value="ssc" onclick="degRemove()" onmouseover="degRemove()" onmouseout="degreeValidation()">HSC<br> 
+			<input type="checkbox" id="hsc" name="degree" value="hsc" onclick="degRemove()" onmouseover="degRemove()" onmouseout="degreeValidation()" > SSC<br>
+			<input type="checkbox" id="bsc" name="degree" value="bsc" onclick="degRemove()" onmouseover="degRemove()" onmouseout="degreeValidation()" > BSC <br>
 					    </td>
-					    <td ></td>
+					    <td id="degreeMsg" ></td>
 					
 				    </tr>
 				    <tr height="40px">
 					    <td><b>Photo</b></td>
 					    <td colspan="2">
-						    <input type="file" name="" value="Browse..."> No file selected.
+						    <input type="file" name="file" id="file"  onmouseout="Picture()" onmouseover="picRemove()" onclick="picRemove()">
+					    </td>
+					    <td id = "picMsg">
 					    </td>
 					
 				    </tr>
