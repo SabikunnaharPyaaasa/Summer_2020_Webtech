@@ -34,7 +34,7 @@
 				</tr>
 				<tr>
 					<td id="emailMsg"></td>
-					<td><input type="submit" name="submit" value="Submit" onclick = "f1()"></td>
+					<td><input type="button" name="submit" value="Submit" onclick = "f1()"></td>
 					<a href = "login.php" style = "display:none">login</a>
 				</tr>
 			</table>
@@ -59,7 +59,7 @@
 			if(this.readyState == 4 && this.status == 200){
 
 				if(this.responseText != ""){
-					document.getElementById('emailmsg').innerHTML = this.responseText;
+					document.getElementById('emailMsg').innerHTML = this.responseText;
 				}else{
 					document.getElementById('emailMsg').innerHTML = "";
 				}
