@@ -43,26 +43,30 @@
 	<script>
 		function f1(){
 			document.getElementsByTagName('a')[0].style.display = 'inline';
+			
 		}
 
 		
 		function emailValidity()
       {
-	     var  Email= document.getElementById("Email").value;
+      	var email = document.getElementById('email').value;
+			var xhttp = new XMLHttpRequest();
+			xhttp.open('POST', '../php/emailCheck.php', true);
+			xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+			xhttp.send('email='+email);
 
-	      if(Email=="")
-	     {
-		    document.getElementById("emailMsg").innerHTML = "i Email Cannot be empty";
-		     return false;
+			xhttp.onreadystatechange = function (){
+			if(this.readyState == 4 && this.status == 200){
 
-	     }
-	
-	    else
-	      {
-		   return true;
-	       }
-
-}
+				if(this.responseText != ""){
+					document.getElementById('emailmsg').innerHTML = this.responseText;
+				}else{
+					document.getElementById('emailMsg').innerHTML = "";
+				}
+				
+			}	
+        }
+    }
 	</script>
 </body>
 </html>
