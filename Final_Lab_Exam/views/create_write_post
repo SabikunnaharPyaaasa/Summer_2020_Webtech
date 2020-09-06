@@ -1,0 +1,43 @@
+<?php
+	require_once('../php/session_header.php');
+	if (isset($_GET['error'])) {
+		
+		if($_GET['error'] == 'db_error'){
+			echo "Something went wrong...please try again";
+		}
+	}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Write Post</title>
+</head>
+<body>
+
+	<form action="../php/BlogController.php" method="post">
+		<fieldset>
+			<legend>Add Write Post</legend>
+			<table>
+				<tr>
+					<td>Writing title</td>
+					<td><input type="text" name="writing_title"></td>
+				</tr>
+				<tr>
+					<td>Writing Description</td>
+					<td><input type="text" name="writing_description"></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" name="create_write_post" value="Create"> 
+						<a href="Author_home.php">Back</a>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
