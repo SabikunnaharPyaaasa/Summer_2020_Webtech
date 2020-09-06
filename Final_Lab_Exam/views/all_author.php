@@ -1,49 +1,43 @@
 <?php
 	require_once('../php/session_header.php');
-	require_once('../service/companyService.php');
+	require_once('../service/AuthorService.php');
 ?>
 
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Company List</title>
+	<title>Author List</title>
 </head>
 <body>
 
 	<a href="home.php">Back</a> |
 	<a href="../php/logout.php">Logout</a> 
 	
-	<h3> Company list</h3>
+	<h3> Author list</h3>
 
 	<table border="1">
 		<tr>
 			<td>ID</td>
-			<td>Company Name</td>
-			<td>Profile Description</td>
-			<td>Industry</td>
-			<td>Company Website</td>
-            <td>Company Logo</td>
-            <td>User Account Id</td>
+			<td>Author Name</td>
+			<td>Contact Number</td>
+			<td>User Name</td>
+			<td>Password</td>
 			<td>Action</td>
 		</tr>
 
 		<?php  
-			$company = getAllCompany();
-			for ($i=0; $i != count($company); $i++) {  ?>
+			$author = getAllAuthor();
+			for ($i=0; $i != count($author); $i++) {  ?>
 		<tr>
-			<td><?=$company[$i]['id']?></td>
-			<td><?=$company[$i]['company_name']?></td>
-			<td><?=$company[$i]['profile_description']?></td>
-			<td><?=$company[$i]['industry']?></td>
+			<td><?=$author[$i]['id']?></td>
+			<td><?=$author[$i]['author_name']?></td>
+			<td><?=$author[$i]['contact_number']?></td>
+			<td><?=$author[$i]['username']?></td>
+			
 			<td>
-                <a href="<?=$company[$i]['company_website']?>"><?=$company[$i]['company_website']?></a>
-            </td>
-            <td><img src="<?=$company[$i]['company_logo']?>" style="height:40px; weidth:30px"></td>
-			<td><?=$company[$i]['user_account_id']?></td>
-			<td>
-				<a href="edit_company.php?id=<?=$company[$i]['id']?>">Edit</a> |
-				<a href="delete_company.php?id=<?=$company[$i]['id']?>"><input type="button" style="background-color:white; border:none; color:blue; cursor:pointer; text-decoration: underline; " value="Delete" onclick="return confirm('Are you want to delete <?=$company[$i]['company_name']?>?')" ></a> 
+				<a href="UpdateAuthor.php?id=<?=$author[$i]['id']?>">Edit</a> |
+				<a href="delete_author.php?id=<?=$author[$i]['id']?>"><input type="button" style="background-color:white; border:none; color:blue; cursor:pointer; text-decoration: underline; " value="Delete" onclick="return confirm('Are you want to delete <?=$author[$i]['author_name']?>?')" ></a> 
 			</td>
 		</tr>
 
