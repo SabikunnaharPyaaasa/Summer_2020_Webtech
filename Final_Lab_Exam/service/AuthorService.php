@@ -59,7 +59,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "insert into admin values('', '{$author['author_name']}','{$author['contact_number']}','{$author['password']}')";
+		$sql = "insert into admin values('', '{$author['author_name']}','{$author['contact_number']}','{$author['username']}','{$author['password']}')";
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{
@@ -68,7 +68,7 @@
 	}
 
 
-	function update($user){
+	function update($author){
 		$conn = dbConnection();
 		if(!$conn){
 			echo "DB connection error";
@@ -83,13 +83,13 @@
 		}
 	}
 
-	function delete($user){
+	function delete($author){
 		$conn = dbConnection();
 		if(!$conn){
 			echo "DB connection error";
 		}
 
-		$sql = "delete from  admin where id={$user['id']}";
+		$sql = "delete from  admin where id={$author['id']}";
 
 		if(mysqli_query($conn, $sql)){
 			return true;
